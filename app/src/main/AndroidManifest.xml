@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.doDue">
+
+    <!-- android:name=".ToDoApplication" tells the Manifest file that ToDoApplication is the Application class which has the necessary features to run the app. -->
+
+    <application
+        android:name="com.example.doDue.ToDoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MVVMTodo">
+        <activity android:name="com.example.doDue.ui.MainActivity"
+            android:windowSoftInputMode="adjustResize">
+
+            <!-- android:windowSoftInputMode="adjustResize", adjusts the size of other views when the keyboard is open. -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

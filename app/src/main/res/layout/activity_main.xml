@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.doDue.ui.MainActivity">
+
+    <!-- FragmentContainerView makes the Activity as the Host for all
+    the fragments attached to it.
+
+    Therefore, we set "defaultNavHost" as true (which also works for the
+    backstack to return to default Fragment when back is pressed).
+
+    Also "navGraph" is to be told to this Activity layout for
+    transitioning between the fragments attached.
+
+    Finally, we also add the "name" attribute as given below, as it contains
+    all the logic for NavHostFragment to work, under the hood. -->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
